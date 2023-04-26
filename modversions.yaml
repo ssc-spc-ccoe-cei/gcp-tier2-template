@@ -1,0 +1,7 @@
+# used by modupdate.sh to checkout a specific version of each submodule, .gitmodules only allows branch name
+# this file must have an entry for each submodule name defined in .gitmodules and point to a branch, tag or commit sha
+#
+# the value must not be quoted, for example the tools submodule,
+# tools: 0.0.0
+
+tools: monorepo

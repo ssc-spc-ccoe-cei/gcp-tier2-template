@@ -1,0 +1,28 @@
+# A simple pipeline to increment version tags for a git repo
+name: version_tagging
+
+# Triggers the workflow on push or pull request events but only for the "main" branch
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  # This workflow contains a single job called "version_tagging"
+  version_tagging:
+    permissions:
+      contents: write
+
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Checkout git submodule
+        run: |
+          echo "Checking out git submodule with 'bash modupdate.sh' ..."
+          bash modupdate.sh
+
+      - name: Generate repository tags per packages
+        run: |
+          echo "Running 'bash tools/scripts/cicd/version-tagging.sh' ..."
+          bash tools/scripts/cicd/version-tagging.sh

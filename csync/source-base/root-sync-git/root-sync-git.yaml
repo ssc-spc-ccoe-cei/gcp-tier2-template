@@ -1,0 +1,17 @@
+# Root Sync
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: id-folder # kpt-set: ${id}-${folder}
+  namespace: config-management-system
+spec:
+  sourceFormat: unstructured
+  git:
+    repo: https://AZDO-ORG@dev.azure.com/AZDO-ORG/AZDO-PROJECT/_git/REPO-NAME # kpt-set: ${repo-url}
+    # repo: https://github.com/GITHUB-ORG/REPO-NAME # kpt-set: ${repo-url} # Alternate, GitHub.
+    branch: main # kpt-set: ${repo-branch}
+    dir: deploy/env # kpt-set: ${repo-dir}
+    revision: HEAD # kpt-set: ${version}
+    auth: token
+    secretRef:
+      name: git-creds
