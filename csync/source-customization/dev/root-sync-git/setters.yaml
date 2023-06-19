@@ -19,4 +19,4 @@ data:
   repo-url: https://AZDO-ORG@dev.azure.com/AZDO-ORG/AZDO-PROJECT/_git/REPO-NAME
   # repo-url: https://github.com/GITHUB-ORG/REPO-NAME # Alternate, GitHub
   repo-branch: main
-  repo-dir: tier2/deploy/env
+  repo-dir: tier2/deploy/dev
