@@ -7,7 +7,7 @@ metadata:
 info:
   description: |
     Landing Zone v2 package
-    A package to setup a git repository root sync
+    A package to setup a t2 git repository root sync
 pipeline:
   mutators:
     - image: gcr.io/kpt-fn/apply-setters:v0.2
