@@ -6,17 +6,11 @@ metadata:
     config.kubernetes.io/local-config: 'true'
 data:
   # Used for naming of the root-sync
-  ## id :
-  ### tier1: 'experimentation' or 'env'
-	### tier2: [client-name]
-	### tier34: [project-id] (we replace environment code with “x”)
-  id: client-name
-  ## Folder: 'csync' or 'tier1' or 'tier2'
-  ## 'tier3' or 'tier4' are used only with RepoSync
-  folder: tier2
+  ## id is the client-name
+  id: <client-name>
 
   # Git repo values
   repo-url: https://AZDO-ORG@dev.azure.com/AZDO-ORG/AZDO-PROJECT/_git/REPO-NAME
   # repo-url: https://github.com/GITHUB-ORG/REPO-NAME # Alternate, GitHub
   repo-branch: main
-  repo-dir: tier2/deploy/dev
+  repo-dir: tier2/configcontroller/deploy/<env>

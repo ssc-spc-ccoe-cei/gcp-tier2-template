@@ -2,14 +2,14 @@
 apiVersion: configsync.gke.io/v1beta1
 kind: RootSync
 metadata:
-  name: id-folder # kpt-set: ${id}-${folder}
+  name: id-t2 # kpt-set: ${id}-t2
   namespace: config-management-system
 spec:
   sourceFormat: unstructured
   git:
     repo: https://AZDO-ORG@dev.azure.com/AZDO-ORG/AZDO-PROJECT/_git/REPO-NAME # kpt-set: ${repo-url}
     branch: main # kpt-set: ${repo-branch}
-    dir: deploy/env # kpt-set: ${repo-dir}
+    dir: tier2/configcontroller/deploy/<env> # kpt-set: ${repo-dir}
     revision: HEAD # kpt-set: ${version}
     auth: token
     secretRef:
