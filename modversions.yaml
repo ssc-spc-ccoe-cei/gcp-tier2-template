@@ -4,4 +4,4 @@
 # the value must not be quoted, for example the tools submodule,
 # tools: 0.0.0
 
-tools: monorepo
+tools: main
