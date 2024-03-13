@@ -1,9 +1,9 @@
 # tier2 repo
 
-A repository that includes YAML manifests. Manifests can define GCP resources in `config connector` format or the Kubernetes components and resources. Refer to this repo for additionnal information. TODO: add link
+A repository that includes YAML manifests. Manifests can define GCP resources in `config connector` format or the Kubernetes components and resources. Refer to this repo for additional information. TODO: add link
 
 - The `/*/configcontroller` folder is where GCP resources are defined using their `config connector` schema.
-- The `/*/kubernetes/<x-fleet-id>/**/<namespace>` folder is where resources that have to be provisionned in a kubernetes `namespace` are defined. The `x-fleet-id` is the GCP project-id where the kubernetes clusters are deployed with character "x" as the environment code because this folder will contain the configuration for all environments.
+- The `/*/kubernetes/_X-FLEET-ID/**/_NAMESPACE` folder is where resources that have to be provisioned in a kubernetes `namespace` are defined. The `x-fleet-id` is the GCP project-id where the kubernetes clusters are deployed with character "x" as the environment code because this folder will contain the configuration for all environments.
 
   The GKE clusters are joined to an [Anthos Fleet](https://cloud.google.com/anthos/fleet-management/docs). This enables Anthos policy controller, Anthos config management and Anthos service mesh(future).
 
